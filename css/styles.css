@@ -1,4 +1,4 @@
-/* Etiquetas Generales */
+/* Inicio propiedades Generales */
 *{
     box-sizing: border-box;
     
@@ -6,11 +6,14 @@
 
 :root{
     --fondo-1: #ffe8b3;
-    --color-primario-1: #FF744B;
-    --titulo-h1: #004D73;
-    --titulo-h2: #FF8979;
-    --titulo-h3: #006AB4;
-    --parrafos: #364652;
+    --color-primario-1: #f89b7e;
+    --color-primario-2: #0f4571;
+    --color-primario-3: #ebb57f;
+    --color-secundario-1: #89abb4;
+    --titulo-h1: #1c3166;
+    --titulo-h2: #b84f04;
+    --titulo-h3: #006AB4; 
+    --parrafos: #262525;
     
 }
 
@@ -23,11 +26,51 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-size: cover;    
+    background-size: cover;  
+    
 }
 
+.navbar{
+    
+    width: 100%;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--titulo-h1);
+    font-weight: 800;
+    font-family: 'Changa', sans-serif;
+    text-shadow: -5px 5px 5px #b5f3f5;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--titulo-h2);
+    font-weight: 1000;
+    font-family: 'Changa', sans-serif;
+}
+
+h3{
+    font-size: 2.3rem;
+    font-style: italic;
+    color: var(--titulo-h3);
+    font-weight: 1000;
+    font-family: 'Changa', sans-serif;
+}
+
+p{
+    color: var(--parrafos);
+    font-size: 1.5rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+/* Fin propiedades Generales */
+
+/*Inicio Servicios*/
+
 .servicios-main{
-    margin: 3rem 4rem;
+    margin: 3rem 3rem;
 }
 
 .servicios-titulo p{
@@ -36,30 +79,30 @@ body{
 }
 
 .servicios{
-    background-color: #FF8979;
+    background-color: var(--color-primario-3);
     border-radius: 7%;
-    /* padding: 1rem; */
+    padding: 1rem; 
 }
 
-.servicios-row{
+.row{
     padding: 0.4rem;
-    margin: 0;
+    margin: 0.5rem 0;
 }
 
-.servicios-row div{
+.row div{
     text-align:right;
-    margin: 0;
+    padding: 0.5rem 0.5rem;
 }
 
-.servicios-row div p{
-    margin: 0.5rem 0.5rem; 
+.row div p{
+    margin: 0.5rem 0.2rem; 
     color: white;
     font-weight: 600;
     font-size: 1.2rem;
     font-family: 'Ubuntu Condensed', sans-serif;
  }
 
- .servicios .servicios-row i{
+ .servicios .row i{
     float: left;
     background-color: #D0F5FF;
     padding: 0.5rem;
@@ -82,6 +125,7 @@ body{
     background: url(../img/background-form.jpg);
     background-size: cover;
     background-position: 0%;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .servicios-form .form-info{
@@ -95,6 +139,7 @@ body{
 
 .servicios-form .form-info input{
     font-size: 1rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .servicios-form .form-info input[type="email"]{
@@ -103,6 +148,7 @@ body{
     padding: 0.5rem;
     border: none;
     background-color: whitesmoke;
+   
 }
 
 .servicios-form .form-info input[type="submit"]{
@@ -113,58 +159,25 @@ body{
     border: none;
     padding: 0.4rem 0.6rem;
     font-weight: 500;
+     
 }
 
 .servicios-form .form-info input[type="submit"]:hover{
     background-color: #FFE6D7;
     color: #690000;
+    
 }
 
 body .contenedor-contenido{
     margin: 3rem auto;
     border-radius: 5%;
-    background: linear-gradient(rgba(255,232,179,0.9), rgba(255,232,179,0.9));
+    background: linear-gradient(rgba(128,193,217,0.85), rgba(158,205,222,0.85));
     width: 95%;
-    padding: 2.5rem;
+    padding: 1.5rem;
     height: max-content; 
 } 
 
-.navbar{
-    
-    width: 100%;
-}
-
-h1{
-    font-size: 3rem;
-    text-align: center;
-    color: var(--titulo-h1);
-    font-weight: 800;
-    font-family: 'Changa', sans-serif;
-}
-
-h2{
-    color: var(--titulo-h2);
-    font-weight: 800;
-    font-family: 'Changa', sans-serif;
-}
-
-h3{
-    color: var(--titulo-h3);
-    font-weight: 800;
-    font-family: 'Changa', sans-serif;
-}
-
-p{
-    color: var(--parrafos);
-    font-size: 1.5rem;
-    font-family: 'Ubuntu Condensed', sans-serif;
-}
-
-/*Inicio Servicios*/
-
-
 /* Fin Servicios */
-
 
 
 /* Footer */
@@ -173,6 +186,8 @@ footer{
     width: 100%;
     color: #D0F5FF;
     background-color: #567B97;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    
 }
 
 .footer-img{
@@ -200,6 +215,7 @@ footer .copyright{
     display: flex;
     justify-content: center;
     padding: 1.2rem 0 1.2rem 0;
+    
 }
 
 footer .copyright i{
@@ -207,10 +223,6 @@ footer .copyright i{
 }
 
 /* Media Queries */
-
-@media only screen and (max-width: 537%) {
-  
-}
 
 
 @media only screen and (max-width: 575px) {
