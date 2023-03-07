@@ -235,3 +235,35 @@ footer .copyright i{
         font-size: 14px;
     }
 }
+
+/*index*/
+
+.index_carrusel {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.planes_viajes_index{
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.paquetes_temporada_index{
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 5px; 
+}
+
+.promociones_index{
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 5px; 
+}
+
+.itinerario_index{
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 5px; 
+}
