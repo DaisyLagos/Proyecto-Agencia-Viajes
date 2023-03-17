@@ -232,7 +232,7 @@ footer .copyright i{
 }
 
 .pagoForm{
-    max-width: 50%;
+    width: 65%;
     margin: 0 auto;
     background-color: #dcf7f3;
     display: flex;
@@ -241,9 +241,29 @@ footer .copyright i{
     
 }
 
+.pagoForm label, .pagoForm input{
+    font-size: 1.2rem;
+}
+
+.pagoForm input{
+    margin: 10px 0;
+}
+
 input[type="text"]{
     background-color: white;
 }
+
+.fechaCodigo{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fechaCodigo input{
+    width: 80px;
+}
+
+
+
 
 .pagoSubtitulo{
     font-size: 2rem;
