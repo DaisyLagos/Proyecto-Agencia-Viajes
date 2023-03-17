@@ -240,23 +240,81 @@ footer .copyright i{
 
 /*index*/
 
-.index_carrusel {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
+
+
+
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.colornegro{
+  
+}
+
+.textocarrusel{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 5px 5px 5px rgba(128,193,217,0.85) ;
+    
+}
+
+
+.planesdeviajes{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+}
+
+.planesdeviajes div p{
+    color: black;
+}
+
+.planesdeviajes div img{
+    width: 25%;
+   
+    float: left;
+    margin: 10px;
+    align-self: center;
+    
+    
+}
+
+@keyframes movimientopanes{
+    50%{
+        transform:scaleX(1)
+    }
+
+}
+
+.planesdeviajes div img:hover{
+
+    animation: movimientopanes 0.5s ease-in-out;
+    
+    
+}
+
+
+.indexTextoC{
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 35%;
+    
 }
 
 .planes_viajes_index{
-    background-color: white;
     margin-top: 50px;
     border-radius: 5px;
+    height: 500px;
+    
 }
 
-.planes_viajes_index img{
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-}
+
 
 .paquetes_temporada_index{
     background-color: white;
@@ -273,9 +331,28 @@ footer .copyright i{
 
 .paquetes_temporada_img img{
     width: 100%;
+    height: 380px;
     margin: 10px;
     border-radius: 5px;
     align-items: center;
+    
+}
+
+
+@keyframes movimiento{
+
+    100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+
+}
+
+.paquetes_temporada_img img:hover{
+
+    animation: movimiento 0.5s ease-in-out;
     
 }
 
@@ -285,14 +362,43 @@ footer .copyright i{
 
 .promociones_index_row img{
     border-radius: 10px;
+    width: 100%;
+}
+
+
+@keyframes movimientopromo{
+
+    100%{
+        transform: scaleX(1)
+    }
+    50%{
+        transform: scaleX(0.5);
+    }
+
 }
 
 .promociones_index_row img:hover{
     border-radius: 50px;
-    transform: translateY(3px);
-    transition: all 0.3s ease-in-out;
+    animation: movimientopromo 0.5s ease-in-out;
 }
 
 .itinerario_index div p{
     color: black;
+}
+
+
+@keyframes movimientocard{
+
+    100%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0.5);
+    }
+
+}
+
+.card:hover{
+    background-color:antiquewhite;
+    animation: movimientocard 0.3s ease-in-out;
 }
