@@ -133,11 +133,21 @@ p{
     box-shadow: 0 5px 10px #000;
 }
 
-.cardPromociones .back .dispoPromociones {
+.cardPromociones .back .dispoPromociones{
     border-top: solid 1px #f3f3f3;
     height: 50px;
     line-height: 50px;
     color: #FF744B;
+}
+
+.dispoPromociones a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #FF744B;
+}
+
+.dispoPromociones a:hover{
+    color: #ffe8b3;
 }
 
 
