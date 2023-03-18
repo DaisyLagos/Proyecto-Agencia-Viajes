@@ -95,6 +95,8 @@ p{
 }
 .imagenActividad a{
     margin-top: 5px;
+    font-weight:600;
+    font-style: italic;
 }
 .imagenActividad a:hover{
     background-color: var(--color-primario-1);
@@ -124,13 +126,13 @@ p{
     }
 }
 
-.contenedor-actividad1 img, .contendor-actividad4 img, .contendor-actividad5 img{
+.contenedor-actividad1 img, .contendor-actividad3 img, .contendor-actividad5 img,  .contenedor-actividad7 img{
     border-radius: 5px;
     box-shadow: 0 2px 5px #364652;
     animation: fadeImageLeft 1s ease-in-out;
 }
 
-.contenedor-actividad2 img, .contendor-actividad3 img{
+.contenedor-actividad2 img, .contendor-actividad4 img,  .contenedor-actividad6 img{
     border-radius: 5px;
     box-shadow: 0 2px 5px #364652;
     animation: fadeImageRight 1s ease-in-out;
