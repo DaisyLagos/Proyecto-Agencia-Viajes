@@ -248,9 +248,6 @@ footer .copyright i{
     height: 100%;
 }
 
-.colornegro{
-  
-}
 
 .textocarrusel{
     z-index: 1;
@@ -276,10 +273,7 @@ footer .copyright i{
 
 .planesdeviajes div img{
     width: 25%;
-   
-    float: left;
-    margin: 10px;
-    align-self: center;
+    
     
     
 }
@@ -291,12 +285,25 @@ footer .copyright i{
 
 }
 
-.planesdeviajes div img:hover{
-
-    animation: movimientopanes 0.5s ease-in-out;
+.imagenesdiv{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 5px;
+    height: 400px;
+    overflow: hidden;
     
     
 }
+
+
+
+
+
+/*animaciones de imagenes*/
+
+
+
 
 
 .indexTextoC{
@@ -313,7 +320,6 @@ footer .copyright i{
     height: 500px;
     
 }
-
 
 
 .paquetes_temporada_index{
