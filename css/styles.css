@@ -225,28 +225,46 @@ footer .copyright i{
 .pagoInfo{
     max-width: 75%;
     margin: 0 auto;
-    background-color: #dcf7f3;
     padding: 25px;
-    border-radius: 8%;
-    box-shadow: -5px 5px 5px #1c3166;
 }
 
-.pagoForm{
-    width: 65%;
-    margin: 0 auto;
-    background-color: #dcf7f3;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
+.pagoInfo p{
+    font-size: 2rem;
     
 }
 
+.pagoForm{
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;   
+}
+
+.tipoTarjeta{
+    display: flex;
+    justify-content: center;
+}
+
+.tipoTarjeta img{
+    height: 4rem;
+    margin: 0 6px;
+}
+
 .pagoForm label, .pagoForm input{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.pagoForm label{
+    font-weight: bold;
 }
 
 .pagoForm input{
+    border: none;
+    box-shadow: -5px 5px 5px #948e99;
     margin: 10px 0;
+    
 }
 
 input[type="text"]{
@@ -262,15 +280,11 @@ input[type="text"]{
     width: 80px;
 }
 
-
-
-
 .pagoSubtitulo{
+    margin-left: 20%;
     font-size: 2rem;
     color: #1c3166;
 }
-
-
 
 
 /* Media Queries */
