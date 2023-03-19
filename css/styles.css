@@ -172,6 +172,22 @@ p{
 
 /* FIN FLIP CARDS PROMOCIONES*/
 
+/* DETALLES DE LAS PROMOCIONES */
+
+.listaprom{
+    color: #364652;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin-bottom: 10px;
+
+}
+
+.tprom{
+    text-align: center;
+    font-size: 1.5rem;
+}
+ 
+/* FIN DETALLES DE LAS PROMOCIONES */
 
 /* Footer */
 footer{

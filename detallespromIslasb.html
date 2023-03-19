@@ -18,7 +18,7 @@
     <!-- FONT-FAMILY
     font-family: 'Changa', sans-serif; -- Esta es para títulos --
     font-family: 'Ubuntu Condensed', sans-serif; -- Esta es para texto normal -- -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Promociones | Love Travel</title>
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
@@ -26,7 +26,7 @@
   <!-- INICIO NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
+          <a class="navbar-brand" href="index.html"> <img src="./img/logo.png" alt="Logotipo" height="50rem"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -52,81 +52,85 @@
 <div class="contenedor-contenido">
   <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
 
-    <h1>Promociones</h1>
+    <h1>Roatán</h1>
     <br>
     <br>
-    <p class="tprom">Vacacionar ahora será más emocionante y divertido por ello te ofrecemos estas increibles propociones que no te puedes perder</p>
+    <p class="tprom">Es una pequeña isla ubicada frente a Honduras, perteneciente a ese mismo país, colmada de fauna y flora marina, aguas cristalinas y templadas, arenas blancas y atardeceres de ensueño.</p>
+    <br>
+    <br>
+    <br>
 
-    <!--FLID CARDS-->
-  <section class="flipcardPromociones">
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromislasb.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Junio 2023</p>
-            <div class="dispoPromociones">
-                <a href="detallespromIslasb.html">Disponible</a>
+     <section>
+        <!--RESUMEN PROMOCIONES-->
+        <div class="container">
+  
+          <div class="row">
+  
+            <div class="col-md-6">
+              <div class="card">
+                <img src="./img/imgroatan.jpg" alt="">
+                
+              </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromruinasc.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-               valida apartir de Febro hasta Agosto 2023</p>
-            <div class="dispoPromociones">
-                <a href="detallespromRuinasc.html">Disponible</a>
+  
+            <div class="col-md-6">
+             <h2>Resumen de la promoción</h2> 
+            
+             <li class="listaprom">Tickets de avion desde el aeropuerto de Palmerola</li>
+             <li class="listaprom">Puedes llevar tus maletas.</li>
+             <li class="listaprom">Roatán te espera con el Paquete Familiar por solo $1500 para 4 personas </li>
+             <li class="listaprom">Traslados Aeropuerto - Hotel - Aeropuerto</li>
+             <li class="listaprom">Alejomiento por 4 dias y 3 noches en el Paradise Beach Hote (Dos Habitaciones)</li>
+             <li class="listaprom">Alimentación completa tipo Buffet</li>
+             <li class="listaprom">Actividades como: Tirolina, visita al museo de perezosos y bueceo en el arrecife de coral </li>
             </div>
+          </div>
         </div>
-    </div>
+        <br>
+        <br>
+        <br>
+        <br>
 
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgprompulha.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Octubre 2023</p>
-              <div class="dispoPromociones">
-                  <a href="detallespromPulha.html">Disponible</a>
+         <!--CARTAS-->
+          <h2 class="tprom">Si quieres saber más de donde te quedarás y las actividades que harás </h2>
+          <h2 class="tprom">Lee este apartado: </h2>
+          <br>
+          <br>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="./img/hotelPB.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paradise Beach Hotel</h5>
+                  <p class="card-text">Rodeado de impresionantes aguas cristalinas, belleza tropical y experiencias inolvidables, este hotel es la joya de la isla de Roatán.</p>
+                </div>
               </div>
-        </div>
-    </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                  <img src="./img/imgcomidaR.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Cayuco Bar and Grill</h5>
+                    <p class="card-text">Disfruta de mariscos frescos, sabores internacionales, las mejores pizzas o un coctel en nuestro restaurante y bar frente al mar.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./img/imgbuceoR.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Buceo en Arrecifes de Coral</h5>
+                    <p class="card-text">Descubre lugares de buceo, aprende nuevas habilidades y haz nuevos amigos marinos mientras exploras el profundo mar azul.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
 
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromlagoy.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Noviembre 2023</p>
-              <div class="dispoPromociones">
-                  <a href="detallespromLagoy.html">Disponible</a>
-              </div>
-        </div>
-    </div>
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromcayosc.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Diciembre 2023</p>
-              <div class="dispoPromociones">
-                  <a href="detallespromCayos.html">Disponible</a>
-              </div>
-        </div>
-    </div>
+           
+             
+      </section>
+
+ 
 
  </section>
   <!-- TERMINAR EL CONTENIDO DE LA PÁGIANA AQUI -->
