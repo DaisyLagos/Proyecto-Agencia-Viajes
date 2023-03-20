@@ -4,6 +4,38 @@
     
 }
 
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--titulo-h1);
+    font-weight: 800;
+    font-family: 'Changa', sans-serif;
+    text-shadow: -5px 5px 5px #b5f3f5;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--titulo-h2);
+    font-weight: 1000;
+    font-family: 'Changa', sans-serif;
+}
+
+h3{
+    font-size: 2.3rem;
+    font-style: italic;
+    color: var(--titulo-h3);
+    font-weight: 1000;
+    font-family: 'Changa', sans-serif;
+}
+
+p{
+    color: var(--parrafos);
+    font-size: 1.5rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+
+
 :root{
     --fondo-1: #ffe8b3;
     --color-primario-1: #f89b7e;
@@ -327,6 +359,136 @@ input[type="text"]{
     font-size: 2rem;
     color: #1c3166;
 }
+
+/*Fin de Pago*/
+
+/* INICIO FLIP CARDS PROMOCIONES */
+
+.pPromociones{
+    color: #f3f3f3;
+    font-size: 1rem;
+}
+.flipcardPromociones{
+    padding-top: 80px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardPromociones{
+    
+    position: relative;
+    width: 300px;
+    height: 424px;
+    margin: 20px;
+}
+
+.cardPromociones .face {
+   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.cardPromociones .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.cardPromociones .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardPromociones .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #004D73;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.cardPromociones .back .dispoPromociones{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+    color: #FF744B;
+}
+
+.dispoPromociones a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #FF744B;
+}
+
+.dispoPromociones a:hover{
+    color: #ffe8b3;
+}
+
+.cardPromociones .back h5 {
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    color: #FF744B;
+}
+
+.cardPromociones .back .pPromociones {
+    letter-spacing: 1px;
+} 
+
+.cardPromociones:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.cardPromociones:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* FIN FLIP CARDS PROMOCIONES*/
+
+/* DETALLES DE LAS PROMOCIONES */
+
+.listaprom{
+    color: #364652;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin-bottom: 10px;
+    text-align: start;
+
+}
+
+.tprom{
+    color: #364652;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card-body .card-title{
+    text-align: center;
+    border-bottom: 3px double black;
+    padding-bottom: 15px;
+}
+
+.card-body .card-text{
+    color: var(--parrafos);
+    font-size: 1.4rem;
+    text-align: justify;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+ 
+/* FIN DETALLES DE LAS PROMOCIONES */
 
 
 /*Inicio Paquetes ***********************************************************************************************/
@@ -688,35 +850,6 @@ header{
 /*Fin Paquetes **************************************************************************************************/
 
 
-h1{
-    font-size: 3rem;
-    text-align: center;
-    color: var(--titulo-h1);
-    font-weight: 800;
-    font-family: 'Changa', sans-serif;
-    text-shadow: -5px 5px 5px #b5f3f5;
-}
-
-h2{
-    font-size: 2.5rem;
-    color: var(--titulo-h2);
-    font-weight: 1000;
-    font-family: 'Changa', sans-serif;
-}
-
-h3{
-    font-size: 2.3rem;
-    font-style: italic;
-    color: var(--titulo-h3);
-    font-weight: 1000;
-    font-family: 'Changa', sans-serif;
-}
-
-p{
-    color: var(--parrafos);
-    font-size: 1.5rem;
-    font-family: 'Ubuntu Condensed', sans-serif;
-}
 
 
 /* Media Queries */

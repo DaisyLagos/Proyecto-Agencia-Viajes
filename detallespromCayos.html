@@ -18,7 +18,7 @@
     <!-- FONT-FAMILY
     font-family: 'Changa', sans-serif; -- Esta es para títulos --
     font-family: 'Ubuntu Condensed', sans-serif; -- Esta es para texto normal -- -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Promociones | Love Travel</title>
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
@@ -26,7 +26,7 @@
   <!-- INICIO NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
+          <a class="navbar-brand" href="index.html"> <img src="./img/logo.png" alt="Logotipo" height="50rem"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -49,90 +49,96 @@
         </div>
       </nav>
 <!-- FIN NAVBAR -->
-<div class="contenedor-contenido">
+<div class="contenedor-contenido detallePromo">
   <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
 
-    <h1>Promociones</h1>
+    <h1>Cayos Cochinos</h1>
     <br>
     <br>
-    <p class="tprom">Vacacionar ahora será más emocionante y divertido por ello te ofrecemos estas increibles propociones que no te puedes perder</p>
+    <p class="tprom">La belleza de sus paisajes, su arrecife de coral, su diversidad natural y su pulcra playa son un verdadero paraíso.</p>
+    <br>
+    <br>
+    <br>
 
-    <!--FLID CARDS-->
-  <section class="flipcardPromociones">
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromislasb.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Junio 2023</p>
-            <div class="dispoPromociones">
-                <a href="detallespromIslasb.html">Disponible</a>
+     <section>
+        <!--RESUMEN PROMOCIONES-->
+        <div class="container">
+  
+          <div class="row">
+  
+            <div class="col-md-6">
+              <div class="card">
+                <img src="./img/imgcayosch.jpg" alt="">
+                
+              </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromruinasc.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-               valida apartir de Febro hasta Agosto 2023</p>
-            <div class="dispoPromociones">
-                <a href="detallespromRuinasc.html">Disponible</a>
+  
+            <div class="col-md-6">
+             <h2>Resumen de la promoción</h2> 
+             <li class="listaprom">Cayos cochinos te espera con el Paquete de 2 personas por solo 6500</li>
+             <li class="listaprom">Alejomiento por 3 dias y 2 noches en el Hotel Palma real (Una habitación doble)   </li>
+             <li class="listaprom">Alimentación completa</li>
+             <li class="listaprom">Tres comidas diarias</li>
+             <li class="listaprom">Actividades como: recorrido en lancha</li>
+             <li class="listaprom">Disfruta de sus bellas playas</li>
             </div>
+          </div>
         </div>
-    </div>
+        <br>
+        <br>
+        <br>
+        <br>
 
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgprompulha.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Octubre 2023</p>
-              <div class="dispoPromociones">
-                  <a href="detallespromPulha.html">Disponible</a>
+         <!--CARTAS-->
+          <h2 class="tprom">Si quieres saber más de donde te quedarás y las actividades que harás </h2>
+          <h2 class="tprom">Lee este apartado: </h2>
+          <br>
+          <br>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="./img/imghotelpalma.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Palma Real</h5>
+                  <p class="card-text"> Es una magnífica elección ya que ofrece un ambiente para familias además de numerosos servicios diseñados para mejorar su estancia.</p>
+                </div>
               </div>
-        </div>
-    </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                  <img src="./img/imgrestauranteCayosch.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Restaurante Larubeya</h5>
+                    <p class="card-text">Es un buffet libre donde puedes encontrar una amplia variedad de comida como diferentes tipos de carnes, arroces, pizza, ensaladas, entre otros.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./img/imglanchaCayosch.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Recorrido en Lancha</h5>
+                    <p class="card-text">Al navegar en una lancha, puede disfrutar de impresionantes vistas del océano y la costa, y tener la oportunidad de observar la vida marina.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
 
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromlagoy.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Noviembre 2023</p>
-              <div class="dispoPromociones">
-                  <a href="detallespromLagoy.html">Disponible</a>
-              </div>
-        </div>
-    </div>
-    <div class="cardPromociones">
-        <div class="face front">
-            <img src="img/imgpromcayosc.png" alt="">
-        </div>
-        <div class="face back">
-            <h4>Fecha de Viaje</h4>
-            <p class="pPromociones">Disfruta de esta increible promoción
-                válida apartir de Febrero hasta Diciembre 2023</p>
-              <div class="dispoPromociones">
-                  <a href="detallespromCayos.html">Disponible</a>
-              </div>
-        </div>
-    </div>
+           
+             
+      </section>
+
+ 
 
  </section>
+
+ <button id="comprar" onclick="abrir()" class="comprarPaquete">Comprar Paquete</button>
   <!-- TERMINAR EL CONTENIDO DE LA PÁGIANA AQUI -->
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
 
 
 </body>
