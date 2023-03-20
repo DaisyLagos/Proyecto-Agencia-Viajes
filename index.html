@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +27,7 @@
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 
 <body>
+
     <!-- INICIO NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -53,44 +55,213 @@
     </nav>
 
     <!-- FIN NAVBAR -->
+
+
     <div class="contenedor-contenido">
       <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
-        <h1>Hola mundo</h1>
-      <h2>Hola mundo</h2>
-      <h3>Hola mundo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequuntur asperiores praesentium iure nesciunt laboriosam perspiciatis veniam ipsum? Consequatur hic dolores incidunt a distinctio saepe vero impedit voluptates nam tenetur.</p>
+    
+      <div class="row carrusel">
+        <div class="col-lg-12">
 
-      <!-- <h1>Hola mundo</h1>
-      <h2>Hola mundo</h2>
-      <h3>Hola mundo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequuntur asperiores praesentium iure nesciunt laboriosam perspiciatis veniam ipsum? Consequatur hic dolores incidunt a distinctio saepe vero impedit voluptates nam tenetur.</p>
+          
 
-      <h1>Hola mundo</h1>
-      <h2>Hola mundo</h2>
-      <h3>Hola mundo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequuntur asperiores praesentium iure nesciunt laboriosam perspiciatis veniam ipsum? Consequatur hic dolores incidunt a distinctio saepe vero impedit voluptates nam tenetur.</p>
+          <div id="carouselExampleCaptions" class="carousel slide carrucelpadre">
+            <div class="carousel-indicators">
+              
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="sombratexto">
+                <h1 class="textocarrusel">
+                  ¡VIAJAR ES VIVIR!,
+                  un viaje se vive 3 veces: cuando lo soñamos, cuando lo vivimos y cuando lo recordamos.
+                </h1>
+              </div>
+              
+              
+              <div class="carousel-item active">
+                <img src="img/luggage-g6e916214f_1280.jpg" class="d-block w-100" alt="...">
 
-      <h1>Hola mundo</h1>
-      <h2>Hola mundo</h2>
-      <h3>Hola mundo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequuntur asperiores praesentium iure nesciunt laboriosam perspiciatis veniam ipsum? Consequatur hic dolores incidunt a distinctio saepe vero impedit voluptates nam tenetur.</p>
+              </div>
+              <div class="carousel-item">
+                <img src="img/girl-gccb9a2ad5_1280.jpg" class="d-block w-100" alt="...">
+   
+              </div>
+              <div class="carousel-item">
+                <img src="img/pintar-suelo-de-cemento-1100x707.jpg" class="d-block w-100" alt="...">
 
-      <h1>Hola mundo</h1>
-      <h2>Hola mundo</h2>
-      <h3>Hola mundo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequuntur asperiores praesentium iure nesciunt laboriosam perspiciatis veniam ipsum? Consequatur hic dolores incidunt a distinctio saepe vero impedit voluptates nam tenetur.</p>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
 
-      <h1>Hola mundo</h1>
-      <h2>Hola mundo</h2>
-      <h3>Hola mundo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequuntur asperiores praesentium iure nesciunt laboriosam perspiciatis veniam ipsum? Consequatur hic dolores incidunt a distinctio saepe vero impedit voluptates nam tenetur.</p>
 
-      <h1>Hola mundo</h1>
-      <h2>Hola mundo</h2>
-      <h3>Hola mundo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequuntur asperiores praesentium iure nesciunt laboriosam perspiciatis veniam ipsum? Consequatur hic dolores incidunt a distinctio saepe vero impedit voluptates nam tenetur.</p> -->
-      <!-- TERMINAR EL CONTENIDO DE LA PÁGIANA AQUI -->
+        </div>
+      </div>
+     
+
+      <!--inicio de planes de viajes-->
+      <div class="row planesdeviajes">
+
+        <h1>PLANES DE VIAJES</h1>
+
+        <div class=" col-lg-12">
+          <h1>¡VIAJAR NUNCA FUE TAN FACIL!</h1>
+          <p>
+            Lovetravel, la mejor agencia de viajes de Honduras, te ofrece una gran cantidad de paquetes y promociones para que puedes realizar tus vacaciones soñadas.
+          </p>
+
+          <div class="imagenesdiv">
+            <img class="imagen1" src="img/best-time-to-visit-honduras.jpg" alt="">
+
+            <img class="imagen2" src="img/honduras-g68b4a0057_1280.jpg" alt="">
+            <img class="imagen3" src="img/honduras-gd61bb5641_1280.jpg" alt="">
+          </div>
+          
+        
+
+        </div>
+
+      </div>
+
+      <!--fin de planes de viajes-->
+
+      <!--inicio de paquetes de temporada-->
+
+      <div class="row paquetes_temporada_row">
+        <h1>PAQUETES DE TEMPORADA</h1>
+        <div class="paquetes_temporada_index col-lg-4">
+          <ul>
+            <li>
+             <h2>Islas de la bahia</h2> 
+              <h3>Recogida en aeropuerto y llegada al hotel</h3>
+            </li>
+
+            <li>
+              <h2>Cayos cochinos
+                <h3>Paseo por los senderos</h3>
+              </h2>
+            </li>
+
+            <li>
+              <h2>Cuevas de taulabe
+                <h3>Visitas a las cuevas</h3>
+              </h2>
+            </li>
+
+            <li>
+              <h2>Rio Platano
+                <h3>Horas libres de descanso en la naturaleza</h3>
+              </h2>  
+            </li>
+
+            <li>
+              <h2>Cataratas de pula
+                <h3>Visita guiada</h3>
+              </h2>  
+            </li>
+          </ul>
+        </div><!--fin de paquetes_temporada_index-->
+
+        <div class=" paquetes_temporada_img col-lg-4">
+
+          <img src="img/west-bay-roatan-centroamerica.jpg" alt="">
+          <img src="img/destacada.jpg" alt="">
+
+        </div>
+
+        <div class="paquetes_temporada_img col-lg-4">
+
+          <img src="img/gotakey1.png" alt="">
+          <img src="img/lago-yojoa-cataratas-pulhapanzak-mi-aventura-viajando-25-1.jpg" alt="">
+
+        </div>
+
+      </div><!--fin div row temporada-->
+      
+     
+      <!--fin de paquetes de temporada-->
+
+      <!--inicio de promociones-->
+      <div class="row promociones_index_row col-lg-12 col-md-12">
+        <h1>PROMOCIONES</h1>
+        <div class="promociones_index col-lg-4 col-md-12 col-sm-12">
+          <img src="img/copan.png" alt="">
+        </div>
+
+        <div class="promociones_index col-lg-4 col-md-12 col-sm-12">
+          <img src="img/islas.png" alt="">
+        </div>
+
+        <div class="promociones_index col-lg-4 col-md-12 col-sm-12">
+          <img src="img/cascada.png" alt="">
+        </div>
+      </div>
+
+ 
+      <!--fin de promociones-->
+
+      <!--inicio de itinerario-->
+      <div class="row itinerario_row col-lg-12 ">
+        <h1>ITINERARIO</h1>
+        <div class="itinerario_index col-lg-4">
+          
+          <div class="card" style="width: 18rem;">
+            <img src="img/tipos-trajes-buceo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">BUCEO EN ARRECIFE DE CORAL</h5>
+              <p class="card-text">No te pierdas esta bella experiencia de conocer los corales y como es nadar entre ellos.</p>
+              <a href="actividades.html" class="btn btn-primary">MAS INFORMAIÓN</a>
+            </div>
+          </div>
+  
+        </div>
+
+        <div class="itinerario_index col-lg-4">
+          
+          <div class="card" style="width: 18rem;">
+            <img src="img/guacamaya-roja-el-ave-que-oestenta-sus-colores-en-america-latina-1280x720.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">VISITAS GUIADAS POR COPAN</h5>
+              <p class="card-text">Disfruta de las hermosas vistas que ofrece copán y su gran historia y variedad de especies de aves.</p>
+              <a href="actividades.html" class="btn btn-primary">MAS INFORMAIÓN</a>
+            </div>
+          </div>
+  
+        </div>
+
+        <div class="itinerario_index col-lg-4">
+          
+          <div class="card" style="width: 18rem;">
+            <img src="img/canoping-780288_960_720.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CANOPING</h5>
+              <p class="card-text">Deporte extremo que consiste en desplazarse de un árbol a otro a través de un cable de acero, con la ayuda de un arnés</p>
+              <a href="actividades.html" class="btn btn-primary">MAS INFORMAIÓN</a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+
+
+      <!--fin de itinerario-->
+
+
+
     </div>
+<!--fin de contenido-->
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
 </body>
 
