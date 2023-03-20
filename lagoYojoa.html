@@ -19,7 +19,8 @@
     font-family: 'Changa', sans-serif; -- Esta es para títulos --
     font-family: 'Ubuntu Condensed', sans-serif; -- Esta es para texto normal -- -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Pago | Love Travel</title>
+    <title>Paquete Lago de Yojoa
+      | Love Travel</title>
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 <body>
@@ -51,45 +52,56 @@
 <!-- FIN NAVBAR -->
   <div class="contenedor-contenido">
     <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
-    <h1>En hora buena... Termine la compra de su próximo destino</h1>
-        <div class="pagoInfo">
-            <p id="pago-etiqueta">Paquete: </p><p id="nombre"></p>
-            <p class="descripPaquete"></p>
-            <p class="pago-etiqueta">Precio:</p><p class="precioPaquete"></p>
-        </div>    
-<p class="pagoSubtitulo">Ingrese sus datos de pago</p>
-        <form class="pagoForm" action="#">
-          <div class="tipoTarjeta">
-            <img src="img/mastercard.png" alt="logo-mastercard">
-            <img src="img/visa.jpg" alt="logo-visa">
-          </div>
-            <label for="nombre">Nombre del titular</label> <input id="nombre" type="text" >
+        <h1 id="nombrePaquete">PAQUETE LAGO DE YOJOA</h1>
+        <div class="container">
+            <div class="row paquete-row">
+                <div class="col-sm-12 col-md-6 col-lg-7">
+                    <p id="descripcion">
+                      El Lago de Yojoa es un lago de Honduras, Centroamérica, tiene una longitud de 16 km y un ancho de 6 km,​ se encuentra localizado entre los departamentos de Comayagua, Cortés y Santa Bárbara. El Lago de Yojoa se encuentra a unos 184 kilómetros de Tegucigalpa, la capital de Honduras.
 
-            <label for="numeroTarjeta">Número de Tarjeta</label> <input id="numeroTarjeta" type="text">
 
-            <div class="fechaCodigo">
-              <div class="fecha">
-                <label for="fechaExp">Fecha de Expiración</label> <input id="fechaExp" type="text" placeholder="mm/yy">
+
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-5">
+                    <img class="paquete-img" src="img/lago.jpg" alt="">
+                </div>
+                <div class="row paquete-actividades">
+                    <h2>Actividades que incluye el paquete</h2>
+                    <ul>
+                        <a href="#"><li>Recorridos en kayak
+                        </li></a>  <!--Pagina de may -->
+                        
+                    </ul>
+                </div>
+                <div class="row paquete-servicios">
+                  <h2>Servicios incluidos en el paquete</h2>
+                  <div class="col-sm-6 col-md-4 col-lg-4">
+                      <i class="fa-solid fa-plane"></i>
+                      <p>Boletos de avión</p>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-4">
+                      <i class="fa-solid fa-hotel"></i>
+                      <p>Reservación de Hotel</p>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-4">
+                      <i class="fa-solid fa-phone-volume"></i>
+                      <p>Atención al cliente 24/7</p>
+                  </div>
               </div>
-              
-
-              <div class="codigo">
-                <label for="codigoSeguridad">Código de seguridad</label> <input id="codigoSeguridad" type="text" placeholder="3 dígitos">
-              </div>
-              
             </div>
-            
 
-            <input value="Comprar" type="submit">
+            <button id="comprar" onclick="abrir()" class="comprarPaquete">Comprar Paquete</button>
+        </div>
+       
 
-        </form>
-      
     <!-- TERMINAR EL CONTENIDO DE LA PÁGIANA AQUI -->
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 <script src="js/script.js"></script>
+
 </body>
 
 <!-- INICIO FOOTER -->

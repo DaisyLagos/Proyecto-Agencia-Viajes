@@ -392,6 +392,10 @@ header{
     margin-bottom: 20px;
 }
 
+.paquete a{
+    text-decoration: none;
+}
+
 .n-paquete{
     margin-bottom: 7px;
     color: black;
@@ -412,7 +416,8 @@ header{
 
 .gallery{
     background: #f2f2f2;
-    border-radius: 0 0 120px 120px;
+    border-radius: 0 0 10% 10%;
+    
 }
 
 .contenedor-galeria{
@@ -467,9 +472,81 @@ header{
     cursor: pointer;
 }
 
+/*inicio Paquetes individuales*/
+
+.paquete-row div{
+    font-size: 1.2rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.paquete-row .paquete-img{
+    width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.paquete-row div p{
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-align: left;
+    color: var(--parrafos);
+}
+
+.paquete-actividades li{
+    list-style-type: none;
+    
+}
+
+.paquete-actividades a{
+    text-decoration: none;
+    color: var(--parrafos);
+}
+
+.paquete-actividades a li:hover{
+    transform: translate(12px);
+}
+
+.paquete-servicios div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.paquete-servicios i{
+    color: var(--color-primario-2);
+    font-size: 2rem;
+}
+
+.paquete-servicios div p{
+    color: var(--parrafos);
+    margin-left: 10px;
+}
+
+.comprarPaquete{
+    display: block;
+    background-color: var(--color-primario-2);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    margin: 0 auto;
+    border: none;
+    box-shadow: -5px 5px 6px #567B97;
+}
+
+.comprarPaquete:hover{
+    transform: scale(1.1);
+    background-color: #567B97;
+    color: #004D73;
+}
+
+/*fin Paquetes individuales*/
+
 /* Footer */
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
     .menu-navegacion{
         width: 50vw;
     }
@@ -561,7 +638,7 @@ header{
     .contact-us{
         width: 90%;
     }
-}
+} */
 
 
 
