@@ -34,36 +34,6 @@ body{
     width: 100%;
 }
 
-h1{
-    font-size: 3rem;
-    text-align: center;
-    color: var(--titulo-h1);
-    font-weight: 800;
-    font-family: 'Changa', sans-serif;
-    text-shadow: -5px 5px 5px #b5f3f5;
-}
-
-h2{
-    font-size: 2.5rem;
-    color: var(--titulo-h2);
-    font-weight: 1000;
-    font-family: 'Changa', sans-serif;
-}
-
-h3{
-    font-size: 2.3rem;
-    font-style: italic;
-    color: var(--titulo-h3);
-    font-weight: 1000;
-    font-family: 'Changa', sans-serif;
-}
-
-p{
-    color: var(--parrafos);
-    font-size: 1.5rem;
-    font-family: 'Ubuntu Condensed', sans-serif;
-}
-
 /* Fin propiedades Generales */
 
 /*inicio Contenido Actividades*/
@@ -75,17 +45,21 @@ p{
 
 }
 
-.contenidoAct p{
+.contenidoAct .parrafoAct{
     text-align: justify;
-
+    color: var(--parrafos);
+    font-size: 1.3rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: normal;
+    
 }
 /* inicio boton ver paquetes*/
 .imagenActividad .btn-outline-light{
-    --bs-btn-border-color: #004D73;
-    --bs-btn-color: var(--bs-black);
+    background-color: #004D73;
+    --bs-btn-color: white;
 }
 .imagenActividad a{
-    margin-top: 5px;
+    margin-top: 15px;
 }
 .imagenActividad a:hover{
     background-color: var(--color-primario-1);
@@ -713,6 +687,36 @@ header{
 
 /*Fin Paquetes **************************************************************************************************/
 
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--titulo-h1);
+    font-weight: 800;
+    font-family: 'Changa', sans-serif;
+    text-shadow: -5px 5px 5px #b5f3f5;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--titulo-h2);
+    font-weight: 1000;
+    font-family: 'Changa', sans-serif;
+}
+
+h3{
+    font-size: 2.3rem;
+    font-style: italic;
+    color: var(--titulo-h3);
+    font-weight: 1000;
+    font-family: 'Changa', sans-serif;
+}
+
+p{
+    color: var(--parrafos);
+    font-size: 1.5rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
 
 
 /* Media Queries */
