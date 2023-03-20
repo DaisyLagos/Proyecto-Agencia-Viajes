@@ -66,6 +66,74 @@ p{
 
 /* Fin propiedades Generales */
 
+/*inicio Contenido Actividades*/
+.imagenActividad{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+}
+
+.contenidoAct p{
+    text-align: justify;
+
+}
+/* inicio boton ver paquetes*/
+.imagenActividad .btn-outline-light{
+    --bs-btn-border-color: #004D73;
+    --bs-btn-color: var(--bs-black);
+}
+.imagenActividad a{
+    margin-top: 5px;
+}
+.imagenActividad a:hover{
+    background-color: var(--color-primario-1);
+    color: white;
+}
+/* fin boton ver paquetes*/
+
+/*inicio animacion imagenes actividades*/
+@keyframes fadeImageLeft {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeImageRight {
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contenedor-actividad1 img, .contendor-actividad4 img, .contendor-actividad5 img{
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #364652;
+    animation: fadeImageLeft 1s ease-in-out;
+}
+
+.contenedor-actividad2 img, .contendor-actividad3 img{
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #364652;
+    animation: fadeImageRight 1s ease-in-out;
+}
+
+/*final animacion imagenes actividades*/
+/*fin Contenido Actividades*/
+
+
+
+
 /*Inicio Servicios*/
 
 .servicios-main{
