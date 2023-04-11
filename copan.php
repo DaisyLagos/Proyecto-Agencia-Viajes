@@ -19,8 +19,7 @@
     font-family: 'Changa', sans-serif; -- Esta es para títulos --
     font-family: 'Ubuntu Condensed', sans-serif; -- Esta es para texto normal -- -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Paquete Lago de Yojoa
-      | Love Travel</title>
+    <title>Paquete Copán | Love Travel</title>
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 <body>
@@ -52,46 +51,50 @@
 <!-- FIN NAVBAR -->
   <div class="contenedor-contenido">
     <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
-        <h1 id="nombrePaquete">PAQUETE LAGO DE YOJOA</h1>
+        <h1 id="nombrePaquete">PAQUETE COPÁN</h1>
         <div class="container">
             <div class="row paquete-row">
                 <div class="col-sm-12 col-md-6 col-lg-7">
                     <p id="descripcion">
-                      El Lago de Yojoa es un lago de Honduras, Centroamérica, tiene una longitud de 16 km y un ancho de 6 km,​ se encuentra localizado entre los departamentos de Comayagua, Cortés y Santa Bárbara. El Lago de Yojoa se encuentra a unos 184 kilómetros de Tegucigalpa, la capital de Honduras.
-
-
-
+                      Copán Ruinas está localizada en el occidente de Honduras, en el Departamento de Copán, a sólo 14 kilómetros de la frontera El Florido con Guatemala. Por muchos años, Copán Ruinas ha tenido fama por sus magníficas ruinas mayas, declaradas por la UNESCO Patrimonio Arqueológico de la Humanidad en 1980. Hoy en día Copán Ruinas es considerada como el París del mundo Maya en Centroamérica.  
                     </p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-5">
-                    <img class="paquete-img" src="img/lago.jpg" alt="">
+                    <img class="paquete-img" src="img/copan.jpg" alt="">
                 </div>
                 <div class="row paquete-actividades">
                     <h2>Actividades que incluye el paquete</h2>
                     <ul>
-                        <a href="#"><li>Recorridos en kayak
-                        </li></a>  <!--Pagina de may -->
+                        <a href="actividades.html"><li>Visita guiada
+                        </li></a> 
                         
                     </ul>
                 </div>
                 <div class="row paquete-servicios">
-                  <h2>Servicios incluidos en el paquete</h2>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                      <i class="fa-solid fa-plane"></i>
-                      <p>Boletos de avión</p>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                      <i class="fa-solid fa-hotel"></i>
-                      <p>Reservación de Hotel</p>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                      <i class="fa-solid fa-phone-volume"></i>
-                      <p>Atención al cliente 24/7</p>
-                  </div>
-              </div>
+                    <h2>Servicios incluidos en el paquete</h2>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <i class="fa-solid fa-plane"></i>
+                        <p>Boletos de avión</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <i class="fa-solid fa-hotel"></i>
+                        <p>Reservación de Hotel</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>Atención al cliente 24/7</p>
+                    </div>
+                </div>
             </div>
 
-            <button id="comprar" onclick="abrir()" class="comprarPaquete">Comprar Paquete</button>
+            <div class="precio">
+              <p class="etiqueta_precio">Precio: </p><p>$</p><p id="money" class="money">300</p>
+            </div> 
+            <?php
+              $var = "3";
+            ?>
+            <button id="comprar" class="comprarPaquete"> <a href="pago.php?variable=<?php echo $var;?>">Comprar Paquete</a> </button>
+            
         </div>
        
 

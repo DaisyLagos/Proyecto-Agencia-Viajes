@@ -19,7 +19,8 @@
     font-family: 'Changa', sans-serif; -- Esta es para títulos --
     font-family: 'Ubuntu Condensed', sans-serif; -- Esta es para texto normal -- -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Paquete Cayos Cochinos | Love Travel</title>
+    <title>Paquete Lago de Yojoa
+      | Love Travel</title>
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 <body>
@@ -51,22 +52,25 @@
 <!-- FIN NAVBAR -->
   <div class="contenedor-contenido">
     <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
-        <h1 id="nombrePaquete">PAQUETE CAYOS COCHINOS</h1>
+        <h1 id="nombrePaquete">PAQUETE LAGO DE YOJOA</h1>
         <div class="container">
             <div class="row paquete-row">
                 <div class="col-sm-12 col-md-6 col-lg-7">
                     <p id="descripcion">
-                      Los Cayos Cochinos son un grupo de islas que está formado por dos pequeñas islas (Cayo Menor y Cayo Grande) y 13 cayos más pequeños de origen coralino situados 30 kilómetros al noreste de La Ceiba en la costa norte de Honduras, aunque geográficamente pertenecen al departamento de Islas de la Bahía y forman parte del municipio de Roatán.
+                      El Lago de Yojoa es un lago de Honduras, Centroamérica, tiene una longitud de 16 km y un ancho de 6 km,​ se encuentra localizado entre los departamentos de Comayagua, Cortés y Santa Bárbara. El Lago de Yojoa se encuentra a unos 184 kilómetros de Tegucigalpa, la capital de Honduras.
+
+
 
                     </p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-5">
-                    <img class="paquete-img" src="img/cayos.jpg" alt="">
+                    <img class="paquete-img" src="img/lago.jpg" alt="">
                 </div>
                 <div class="row paquete-actividades">
                     <h2>Actividades que incluye el paquete</h2>
                     <ul>
-                        <a href="#"><li>Recorrido en lancha</li></a>  <!--Pagina de may -->
+                        <a href="#"><li>Recorridos en kayak
+                        </li></a>  <!--Pagina de may -->
                         
                     </ul>
                 </div>
@@ -86,8 +90,13 @@
                   </div>
               </div>
             </div>
-
-            <button id="comprar" onclick="abrir()" class="comprarPaquete">Comprar Paquete</button>
+            <div class="precio">
+              <p class="etiqueta_precio">Precio: </p><p>$</p><p>300</p>
+            </div>
+            <?php
+              $var = "4";
+            ?>
+            <button id="comprar" class="comprarPaquete"> <a href="pago.php?variable=<?php echo $var;?>">Comprar Paquete</a> </button>
         </div>
        
 

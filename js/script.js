@@ -4,10 +4,12 @@
 
 
  function abrir(){
-  location.href = "pago.html"; 
-
-
+    location.href = "pago.html"; 
+    
+    
+  
 }
+
 
 // var loca = 
 

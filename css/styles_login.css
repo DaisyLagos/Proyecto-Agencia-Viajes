@@ -1,0 +1,133 @@
+/* Inicio propiedades Generales */
+*::after, *::before, *{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --fondo-1: #ede0d1;
+    --color-primario-1: #f89b7e;
+    --color-primario-2: #0f4571;
+    --color-primario-3: #ebb57f;
+    --color-secundario-1: #89abb4;
+    --titulo-h1: #1c3166;
+    --titulo-h2: #b84f04;
+    --titulo-h3: #006AB4; 
+    --parrafos: #262525;
+}
+
+.fondo{
+    background: url(../img/fondo_login.jpeg);
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+}
+
+.colorFondo{
+    margin: 0;
+    background-color: rgba(120,133, 158, 0.6);
+    height: 100%;
+    width: 100%;
+}
+
+.formulario{
+    background-color: lightblue;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    background-color: var(--color-primario-3);
+    border: none;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+button:hover{
+    background-color: var(--color-primario-1);
+    transform: scale(1.1);
+}
+
+i{
+    font-size: 1.5rem;
+}
+
+h1{
+    text-align: center;
+    color: var(--titulo-h2);
+}
+
+.logo{
+    color: var(--titulo-h2);
+    display: block;
+    font-size: 180px;
+    margin: 0 auto 15px auto;
+    text-align: center;
+
+}
+
+label{
+    color: var(--titulo-h2);
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input{
+    margin: 0 auto;
+    font-size: 1.2rem;
+    width: 93%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid var(--color-primario-1);
+    background-color: #ede0d1;
+}
+
+.reset{
+    margin-top: 15px;
+    text-align: right;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.usuario{
+    display: flex;
+    /* background-color: pink; */
+
+}
+
+.usuario i{
+    color: var(--color-primario-2);
+}
+
+.cuerpoFormulario{
+    background-color: var(--fondo-1);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    width: 65%;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .fondo{
+        background: url(../img/fondo_login.jpeg);
+        background-position: -20px -150px;
+        height: 400px;
+        padding: 0;
+    }
+}

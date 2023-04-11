@@ -14,12 +14,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
-
     <!-- FONT-FAMILY
     font-family: 'Changa', sans-serif; -- Esta es para títulos --
     font-family: 'Ubuntu Condensed', sans-serif; -- Esta es para texto normal -- -->
+    <title>Pago | Love Travel</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AQ9oBH_JGHQrQg7_EEaz-B5B6PfbBVL094u6w3z75kPB7uBdcPIcNqNnAY1ChjRQWB0I1a0wSFfD4eWC&currency=USD"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Paquete Copán | Love Travel</title>
+
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 <body>
@@ -51,55 +52,109 @@
 <!-- FIN NAVBAR -->
   <div class="contenedor-contenido">
     <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
-        <h1 id="nombrePaquete">PAQUETE COPÁN</h1>
-        <div class="container">
-            <div class="row paquete-row">
-                <div class="col-sm-12 col-md-6 col-lg-7">
-                    <p id="descripcion">
-                      Copán Ruinas está localizada en el occidente de Honduras, en el Departamento de Copán, a sólo 14 kilómetros de la frontera El Florido con Guatemala. Por muchos años, Copán Ruinas ha tenido fama por sus magníficas ruinas mayas, declaradas por la UNESCO Patrimonio Arqueológico de la Humanidad en 1980. Hoy en día Copán Ruinas es considerada como el París del mundo Maya en Centroamérica.  
+    <h1>En hora buena... Termine la compra de su próximo destino</h1>
+        <div class="pagoInfo">
+
+        <!-- TRABAJAR EN EL PASO DE LOS DATOS -->
+        <!-- ************************************************************************************************* -->
+
+        <?php
+            $con = mysqli_connect("localhost", "root", "", "proyecto");
+            $id = $_GET['variable'];
+            $res = mysqli_query($con, "SELECT * FROM paquetes where idPaquete = $id");
+            $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
+        ?>
+            <h2 id="pagoTitulo"> <?php echo $row['nombrePaquete'] ?> </h2>
+            <p class="descripPaquete"><?php echo $row['descripcion'] ?></p>
+            <h3 class="pago-etiqueta">Precio:</h3><p id="precioPaquete" class="precioPaquete"> <?php echo $row['precio'] ?> </p>
+        </div>    
+
+        <?php mysqli_close($con); ?>
 
 
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-5">
-                    <img class="paquete-img" src="img/copan.jpg" alt="">
-                </div>
-                <div class="row paquete-actividades">
-                    <h2>Actividades que incluye el paquete</h2>
-                    <ul>
-                        <a href="#"><li>Visita guiada
-                        </li></a>  <!--Pagina de may -->
-                        
-                    </ul>
-                </div>
-                <div class="row paquete-servicios">
-                    <h2>Servicios incluidos en el paquete</h2>
-                    <div class="col-sm-6 col-md-4 col-lg-4">
-                        <i class="fa-solid fa-plane"></i>
-                        <p>Boletos de avión</p>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4">
-                        <i class="fa-solid fa-hotel"></i>
-                        <p>Reservación de Hotel</p>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4">
-                        <i class="fa-solid fa-phone-volume"></i>
-                        <p>Atención al cliente 24/7</p>
-                    </div>
-                </div>
+<div id="smart-button-container">
+  <div style="text-align: center;">
+    <div id="paypal-button-container"></div>
+  </div>
+</div>
+
+<script>
+function initPayPalButton() {
+  paypal.Buttons({
+    style: {
+      shape: 'pill',
+      color: 'gold',
+      layout: 'vertical',
+      label: 'pay',
+      
+    },
+
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: <?php echo $row["precio"]?>
+          }
+        }]
+      });
+    },
+
+    onApprove: function(data, action){
+      action.order.capture().then(function (detalles){
+        console.log(detalles);
+      })
+    },
+
+    onCancel: function(data){
+      alert("Pago Cancelado");
+      console.log(data);
+    }
+    
+
+
+
+  }).render('#paypal-button-container');
+}
+initPayPalButton();
+</script>
+
+
+
+
+        <!-- <form class="pagoForm" action="#">
+          <div class="tipoTarjeta">
+            <img src="img/mastercard.png" alt="logo-mastercard">
+            <img src="img/visa.jpg" alt="logo-visa">
+          </div>
+            <label for="nombre">Nombre del titular</label> <input id="nombre" type="text" >
+
+            <label for="identidad">Número de identidad</label> <input id="identidad" type="text" >
+
+            <label for="numeroTarjeta">Número de Tarjeta</label> <input id="numeroTarjeta" type="text">
+
+            <div class="fechaCodigo">
+              <div class="fecha">
+                <label for="fechaExp">Fecha de Expiración</label> <input id="fechaExp" type="text" placeholder="mm/yy">
+              </div>
+              
+
+              <div class="codigo">
+                <label for="codigoSeguridad">Código de seguridad</label> <input id="codigoSeguridad" type="text" placeholder="3 dígitos">
+              </div>
+              
             </div>
+            
 
-            <button id="comprar" onclick="abrir()" class="comprarPaquete">Comprar Paquete</button>
-        </div>
-       
+            <input value="Comprar" type="submit">
 
+        </form> -->
+      
     <!-- TERMINAR EL CONTENIDO DE LA PÁGIANA AQUI -->
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 <script src="js/script.js"></script>
-
 </body>
 
 <!-- INICIO FOOTER -->

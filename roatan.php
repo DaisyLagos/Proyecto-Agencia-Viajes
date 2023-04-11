@@ -19,8 +19,7 @@
     font-family: 'Changa', sans-serif; -- Esta es para títulos --
     font-family: 'Ubuntu Condensed', sans-serif; -- Esta es para texto normal -- -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Paquete Cataratas Pulhapanzak
-      | Love Travel</title>
+    <title>Paquete Roatán | Love Travel</title>
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 <body>
@@ -52,27 +51,25 @@
 <!-- FIN NAVBAR -->
   <div class="contenedor-contenido">
     <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
-        <h1 id="nombrePaquete">PAQUETE CATARATAS DE PULHAPANZAK</h1>
+        <h1 id="nombrePaquete">PAQUETE DE ROATÁN</h1>
         <div class="container">
             <div class="row paquete-row">
                 <div class="col-sm-12 col-md-6 col-lg-7">
                     <p id="descripcion">
-                      Las Cataratas Pulhapanzak son unas cataratas sobre el Río Blanco que se encuentran en la República de Honduras.
-
-Situada al Norte del Lago de Yojoa, es considerada una de las más bellas cascadas de Centro América por sus aguas cristalinas y una catarata de 43 m de altura. En Pulhapanzak se han descubierto, además, vestigios arqueológicos de lo que podría haber sido el centro de una antigua cultura, anterior a los Mayas.
-
-
+                      Sin duda, uno de los más fascinantes lugares turísticos de Honduras, son las Islas de la Bahía, un paraíso caribeño de arenas blancas y aguas cristalinas, rodeado por la segunda barrera de coral más grande del planeta. <br>
+                      Roatán es la isla más conocida del archipiélago, elegida por numerosas celebridades de Hollywood para disfrutar de sus vacaciones. En esta isla, se encuentra la famosa West Bay, distinguida por varias publicaciones ligadas al mundo del turismo, como una de las 10 mejores playas del planeta.
                     </p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-5">
-                    <img class="paquete-img" src="img/pulha.jpg" alt="">
+                    <img class="paquete-img" src="img/roa2.jpg" alt="">
                 </div>
                 <div class="row paquete-actividades">
                     <h2>Actividades que incluye el paquete</h2>
                     <ul>
-                        <a href="#"><li>Visita guiada
+                        <a href="#"><li>Tirolina</li></a>  <!--Pagina de may -->
+                        <a href="#"><li>Visita a santuario de perezosos</li></a>  <!--Pagina de may -->
+                        <a href="#"><li>Buceo en el arrecife de coral
                         </li></a>  <!--Pagina de may -->
-                        
                     </ul>
                 </div>
                 <div class="row paquete-servicios">
@@ -91,8 +88,15 @@ Situada al Norte del Lago de Yojoa, es considerada una de las más bellas cascad
                   </div>
               </div>
             </div>
+            <div class="precio">
+              <p class="etiqueta_precio">Precio: </p><p>$</p><p>300</p>
+            </div>
 
-            <button id="comprar" onclick="abrir()" class="comprarPaquete">Comprar Paquete</button>
+            <?php
+              $var = "1";
+            ?>
+
+            <button id="comprar" class="comprarPaquete"> <a href="pago.php?variable= <?php echo $var; ?>">Comprar Paquete</a> </button>
         </div>
        
 

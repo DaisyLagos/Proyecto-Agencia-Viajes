@@ -136,6 +136,20 @@ body{
     overflow: hidden;
 }
 
+/*Inicio Barra de navegación*/
+.navbar-nav .nav-link{
+   height: 3rem;
+}
+
+.navbar-nav .nav-link:hover{
+
+    font-weight: bold;
+    background-color: var(--color-primario-1);
+    color: white;
+}
+
+/*Fin Barra de navegación*/
+
 /*Pantallas lg*/
 @media screen and (min-width:992px){
 
@@ -197,7 +211,7 @@ body{
 }
 
 .imagen2:hover{
-    -webkit-transform: scale(-1,1);
+    /* -webkit-transform: scale(-1,1); */
     z-index: 1;
 
 }
@@ -250,7 +264,7 @@ body{
     }
     
     .imagen2:hover{
-        -webkit-transform: scale(-1,1);
+        /* -webkit-transform: scale(-1,1); */
         z-index: 1;
     
     }
@@ -308,7 +322,7 @@ body{
     }
     
     .imagen2:hover{
-        -webkit-transform: scale(-1,1);
+        /* -webkit-transform: scale(-1,1); */
         z-index: 1;
     
     }
@@ -365,7 +379,7 @@ body{
     }
     
     .imagen2:hover{
-        -webkit-transform: scale(-1,1);
+        /* -webkit-transform: scale(-1,1); */
         z-index: 1;
     
     }
@@ -725,68 +739,15 @@ footer .copyright i{
 }
 
 /*Pagos Pagina*/
-.pagoInfo{
+div>.pagoInfo{
     max-width: 75%;
     margin: 0 auto;
     padding: 25px;
 }
 
-.pagoInfo p{
+#pagoInfo>p{
     font-size: 2rem;
     
-}
-
-.pagoForm{
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;   
-}
-
-.tipoTarjeta{
-    display: flex;
-    justify-content: center;
-}
-
-.tipoTarjeta img{
-    height: 4rem;
-    margin: 0 6px;
-}
-
-.pagoForm label, .pagoForm input{
-    font-size: 1.4rem;
-    font-family: 'Ubuntu Condensed', sans-serif;
-}
-
-.pagoForm label{
-    font-weight: bold;
-}
-
-.pagoForm input{
-    border: none;
-    box-shadow: -5px 5px 5px #948e99;
-    margin: 10px 0;
-    
-}
-
-input[type="text"]{
-    background-color: white;
-}
-
-.fechaCodigo{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.fechaCodigo input{
-    width: 80px;
-}
-
-.pagoSubtitulo{
-    margin-left: 20%;
-    font-size: 2rem;
-    color: #1c3166;
 }
 
 /*Fin de Pago*/
@@ -1105,6 +1066,24 @@ header{
     cursor: pointer;
 }
 
+.precio{
+    width: 40%;
+    border-radius: 50%;
+    background-color: #EDE9D0;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: -5px 5px 6px  #0f4571;
+}
+
+.precio p{
+    margin: 0 5px;
+}
+
+.etiqueta_precio{
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
 /*inicio Paquetes individuales*/
 
 .paquete-row div{
@@ -1161,12 +1140,17 @@ header{
 .comprarPaquete{
     display: block;
     background-color: var(--color-primario-2);
-    color: white;
     font-weight: bold;
     padding: 0.5rem 1.5rem;
     margin: 0 auto;
     border: none;
     box-shadow: -5px 5px 6px #567B97;
+}
+
+.comprarPaquete a{
+    color: white;;
+    text-decoration: none;
+
 }
 
 .comprarPaquete:hover{
