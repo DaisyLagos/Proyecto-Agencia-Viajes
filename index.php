@@ -1,3 +1,10 @@
+<?php 
+  session_start();
+   if(empty($_SESSION["idUsuario"]))
+    {
+      header("location: login.php");
+   }
+?>
 <!DOCTYPE html>
 
 <html lang="es">
@@ -29,32 +36,46 @@
 <body>
 
     <!-- INICIO NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="paquetes.html">PAQUETES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="promociones.html">PROMOCIONES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="actividades.html">ACTIVIDADES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="servicios.html">SERVICIOS</a>
-            </li>
-          </ul>
-        </div>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <div class="nav-link">
+              <?php echo $_SESSION['nombre'] ." ". $_SESSION['apellido'] ?>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="paquetes.php">PAQUETES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="promociones.php">PROMOCIONES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="actividades.php">ACTIVIDADES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="servicios.php">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="registro.php">REGISTRAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="login.php">INGRESAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="controlador_cerrar_session.php">SALIR</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-
-    <!-- FIN NAVBAR -->
+    </div>
+  </nav>
+  <!-- FIN NAVBAR -->
 
 
     <div class="contenedor-contenido">

@@ -1,3 +1,10 @@
+<?php 
+  session_start();
+   if(empty($_SESSION["idUsuario"]))
+    {
+      header("location: login.php");
+   }
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,24 +39,38 @@
   <!-- INICIO NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
+      <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="paquetes.html">PAQUETES</a>
+        <li class="nav-item">
+            <div class="nav-link">
+              <?php echo $_SESSION['nombre'] ." ". $_SESSION['apellido'] ?>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="promociones.html">PROMOCIONES</a>
+            <a class="nav-link" href="paquetes.php">PAQUETES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="actividades.html">ACTIVIDADES</a>
+            <a class="nav-link" href="promociones.php">PROMOCIONES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="servicios.html">SERVICIOS</a>
+            <a class="nav-link " href="actividades.php">ACTIVIDADES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="servicios.php">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="registro.php">REGISTRAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="login.php">INGRESAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="controlador_cerrar_session.php">SALIR</a>
           </li>
         </ul>
       </div>
@@ -66,7 +87,7 @@
         <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
           <div class="imagenActividad">
             <img src="./img/imgAct6.jpg" class="img-fluid" alt="Tirolina">
-            <a class="btn btn-outline-light" href="roatan.html" role="button">Ver Paquete Roatan</a>
+            <a class="btn btn-outline-light" href="roatan.php" role="button">Ver Paquete Roatan</a>
           </div>
         </div>
         <div class="col-md-12 col-sm-12 col-lg-6 col-lg-6">
@@ -102,7 +123,7 @@
         <div class="imgBoton col-md-12 col-sm-12 col-lg-6 col-xl-6">
           <div class="imagenActividad">
             <img src="./img/imgAct2.jpg" class="img-fluid" alt="Ruinas de Copan">
-            <a class="btn btn-outline-light" href="copan.html" role="button">Ver Paquete Copán</a>
+            <a class="btn btn-outline-light" href="copan.php" role="button">Ver Paquete Copán</a>
           </div>
         </div>
       </div>
@@ -127,7 +148,7 @@
         <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
           <div class="imagenActividad">
             <img src="./img/imgAct3.jpg" class="img-fluid" alt="Lago de Yojoa">
-            <a class="btn btn-outline-light" href="lagoYojoa.html" role="button">Ver Paquete Lago de Yojoa</a>
+            <a class="btn btn-outline-light" href="lagoYojoa.php" role="button">Ver Paquete Lago de Yojoa</a>
           </div>
         </div>
       </div>
@@ -140,7 +161,7 @@
         <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
           <div class="imagenActividad">
             <img src="./img/imgAct4.jpg" class="img-fluid" alt="Cayos Cochinos">
-            <a class="btn btn-outline-light" href="cayosCochinos" role="button">Ver Paquete Cayos Cochinos</a>
+            <a class="btn btn-outline-light" href="cayosCochinos.php" role="button">Ver Paquete Cayos Cochinos</a>
           </div>
         </div>
         <div class="col-md-12 col-sm-12 col-lg-6 col-lg-6">
@@ -161,7 +182,7 @@
         <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
           <div class="imagenActividad">
             <img src="./img/imgAct5.jpg" class="img-fluid" alt="Cataratas Pulhapanzak">
-            <a class="btn btn-outline-light" href="cataratas.html" role="button">Ver Paquete Pulhapanzak</a>
+            <a class="btn btn-outline-light" href="cataratas.php" role="button">Ver Paquete Pulhapanzak</a>
           </div>
         </div>
         <div class="col-md-12 col-sm-12 col-lg-6 col-lg-6">
@@ -179,6 +200,7 @@
     </section>
   </div>
 
+  
   <!-- TERMINAR EL CONTENIDO DE LA PÁGIANA AQUI -->
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

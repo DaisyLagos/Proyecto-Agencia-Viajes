@@ -1,3 +1,10 @@
+<?php 
+  session_start();
+  if(empty($_SESSION["idUsuario"]))
+  {
+     header("location: login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,36 +27,50 @@
     <title>Pago | Love Travel</title>
     <script src="https://www.paypal.com/sdk/js?client-id=AQ9oBH_JGHQrQg7_EEaz-B5B6PfbBVL094u6w3z75kPB7uBdcPIcNqNnAY1ChjRQWB0I1a0wSFfD4eWC&currency=USD"></script>
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 <body>
   <!-- INICIO NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="paquetes.html">PAQUETES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="promociones.html">PROMOCIONES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="actividades.html">ACTIVIDADES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="servicios.html">SERVICIOS</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-<!-- FIN NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <div class="nav-link">
+              <?php echo $_SESSION['nombre'] ." ". $_SESSION['apellido'] ?>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="paquetes.php">PAQUETES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="promociones.php">PROMOCIONES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="actividades.php">ACTIVIDADES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="servicios.php">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="registro.php">REGISTRAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="login.php">INGRESAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="controlador_cerrar_session.php">SALIR</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- FIN NAVBAR -->
   <div class="contenedor-contenido">
     <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
     <h1>En hora buena... Termine la compra de su próximo destino</h1>
@@ -59,18 +80,29 @@
         <!-- ************************************************************************************************* -->
 
         <?php
+            $tipo = $_GET['tipo'];         
             $con = mysqli_connect("localhost", "root", "", "proyecto");
             $id = $_GET['variable'];
-            $res = mysqli_query($con, "SELECT * FROM paquetes where idPaquete = $id");
-            $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
+            
+            if($tipo == "1"){
+              $sql = "SELECT * FROM promo where idPromo = $id";
+              $res = mysqli_query($con, $sql);
+            }
+            
+            if($tipo == "2"){
+              $sql = "SELECT * FROM paquetes where idPaquete = $id";
+              $res = mysqli_query($con, $sql);
+            }
+            
+            $row = mysqli_fetch_array($res, MYSQLI_NUM);
+            $money = $row[3];
         ?>
-            <h2 id="pagoTitulo"> <?php echo $row['nombrePaquete'] ?> </h2>
-            <p class="descripPaquete"><?php echo $row['descripcion'] ?></p>
-            <h3 class="pago-etiqueta">Precio:</h3><p id="precioPaquete" class="precioPaquete"> <?php echo $row['precio'] ?> </p>
+            <h2 id="pagoTitulo"> <?php echo $row[1] ?> </h2>
+            <p class="descripPaquete"><?php echo $row[2] ?></p>
+            <h3 class="pago-etiqueta">Precio:</h3><p id="precioPaquete" class="precioPaquete"> $ <?php echo $row[3] ?> </p>
         </div>    
 
         <?php mysqli_close($con); ?>
-
 
 <div id="smart-button-container">
   <div style="text-align: center;">
@@ -79,6 +111,7 @@
 </div>
 
 <script>
+  var money = JSON.parse('<?php echo json_encode($money);?>');
 function initPayPalButton() {
   paypal.Buttons({
     style: {
@@ -86,14 +119,13 @@ function initPayPalButton() {
       color: 'gold',
       layout: 'vertical',
       label: 'pay',
-      
     },
-
+    
     createOrder: function(data, actions) {
       return actions.order.create({
         purchase_units: [{
           amount: {
-            value: <?php echo $row["precio"]?>
+            value: money,
           }
         }]
       });
@@ -109,52 +141,17 @@ function initPayPalButton() {
       alert("Pago Cancelado");
       console.log(data);
     }
-    
-
-
 
   }).render('#paypal-button-container');
 }
 initPayPalButton();
 </script>
 
-
-
-
-        <!-- <form class="pagoForm" action="#">
-          <div class="tipoTarjeta">
-            <img src="img/mastercard.png" alt="logo-mastercard">
-            <img src="img/visa.jpg" alt="logo-visa">
-          </div>
-            <label for="nombre">Nombre del titular</label> <input id="nombre" type="text" >
-
-            <label for="identidad">Número de identidad</label> <input id="identidad" type="text" >
-
-            <label for="numeroTarjeta">Número de Tarjeta</label> <input id="numeroTarjeta" type="text">
-
-            <div class="fechaCodigo">
-              <div class="fecha">
-                <label for="fechaExp">Fecha de Expiración</label> <input id="fechaExp" type="text" placeholder="mm/yy">
-              </div>
-              
-
-              <div class="codigo">
-                <label for="codigoSeguridad">Código de seguridad</label> <input id="codigoSeguridad" type="text" placeholder="3 dígitos">
-              </div>
-              
-            </div>
-            
-
-            <input value="Comprar" type="submit">
-
-        </form> -->
-      
     <!-- TERMINAR EL CONTENIDO DE LA PÁGIANA AQUI -->
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-<script src="js/script.js"></script>
 </body>
 
 <!-- INICIO FOOTER -->

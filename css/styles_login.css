@@ -4,6 +4,13 @@
     margin: 0;
 }
 
+html{
+    height: 100%;
+    font-size: 17px;
+   
+}
+
+
 :root{
     --fondo-1: #ede0d1;
     --color-primario-1: #f89b7e;
@@ -16,6 +23,16 @@
     --parrafos: #262525;
 }
 
+/*Inicio Barra de navegación*/
+.navbar-nav .nav-link{
+    height: 3rem;
+ }
+ .navbar-nav .nav-link:hover{
+     font-weight: bold;
+     background-color: var(--color-primario-1);
+     color: white;
+ }
+ /*Fin Barra de navegación*/
 .fondo{
     background: url(../img/fondo_login.jpeg);
     background-size: cover;
@@ -23,11 +40,71 @@
     padding: 0;
 }
 
+.registro-body{
+    background: url(../img/fondo_login.jpeg);
+    background-size: cover;
+    height: 110vh;
+    width: 100vw;
+    min-height: 950px;
+    
+}
+
+.formulario-registro{
+    margin: 0 auto;
+    height: 100%;
+}
+
+.cuerpoFormulario-registro{
+    display: block;
+    background-color: var(--fondo-1);
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 7%;
+    height: 90%;
+    width: 700px;
+    min-width: 500px;
+    min-height: 850px;
+
+}
+
+.form-registro{
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65%;
+    margin: 10px auto;
+}
+
+.form-registro h1{
+    margin-top: 150px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cuerpoFormulario-registro .logo{
+    /* margin-top: 70px; */
+    font-size: 7rem;
+    margin-bottom: 90px;
+}
+
+.formulario__input-error{
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.formulario__input-error-activo{
+    display: block;
+}
+
 .colorFondo{
     margin: 0;
     background-color: rgba(120,133, 158, 0.6);
     height: 100%;
     width: 100%;
+    padding: 10vh 0;
 }
 
 .formulario{
@@ -37,15 +114,35 @@
     padding: 0;
 }
 
-button{
+input.button{
     background-color: var(--color-primario-3);
     border: none;
     width: 40%;
-    margin: 0 auto;
+    margin: 15px auto;
     font-size: 1.2rem;
+    color: #753826;
+    font-weight: 600;
+    padding: 6px 0;
 }
 
-button:hover{
+input.button:hover{
+    background-color: var(--color-primario-1);
+    transform: scale(1.1);
+}
+
+
+#enviar-login{
+    background-color: var(--color-primario-3);
+    border: none;
+    width: 40%;
+    margin: 3px auto;
+    font-size: 1.2rem;
+    color: #753826;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+#enviar-login:hover{
     background-color: var(--color-primario-1);
     transform: scale(1.1);
 }
@@ -55,6 +152,7 @@ i{
 }
 
 h1{
+    margin-top: 70px;
     text-align: center;
     color: var(--titulo-h2);
 }
@@ -62,10 +160,15 @@ h1{
 .logo{
     color: var(--titulo-h2);
     display: block;
-    font-size: 180px;
-    margin: 0 auto 15px auto;
+    font-size: 8rem;
+    margin: 0 auto 70px auto;
     text-align: center;
+}
 
+.aviso-login{
+    z-index: 2;
+    margin-bottom: 50px;
+    height: 100px;
 }
 
 label{
@@ -73,10 +176,9 @@ label{
     font-size: 1.1rem;
     text-align: center;
     font-weight: bold;
-    margin-top: 20px;
 }
 
-input{
+input.casillas{
     margin: 0 auto;
     font-size: 1.2rem;
     width: 93%;
@@ -87,23 +189,45 @@ input{
     background-color: #ede0d1;
 }
 
+input.casillas:focus{
+        /* border: 3px solid #0075FF; */
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+        background-color: #ede0d1;
+
+}
+
 .reset{
     margin-top: 15px;
     text-align: right;
     font-style: italic;
     font-size: 1.1rem;
     color: black;
+}
+
+.link-reset{
     text-decoration: none;
+}
+
+form .reset:hover{
+    color: darkblue;
+    font-weight: 500;
 }
 
 .usuario{
     display: flex;
+    flex-direction: column;
     /* background-color: pink; */
 
 }
 
+
 .usuario i{
     color: var(--color-primario-2);
+}
+
+.input-icon{
+    display: flex;
 }
 
 .cuerpoFormulario{
@@ -122,12 +246,62 @@ form{
     width: 65%;
 }
 
+/*VALIDACIÓN*/
+
+input.formulario__grupo-incorrecto {
+	border: 3px solid #bb2929;
+}
+
+input.formulario__grupo-correcto {
+    border: 3px solid #1ed12d;
+}
+
+
+
 
 @media only screen and (max-width: 767px) {
+
+    html{
+        font-size: 19px;
+       
+    }
+
     .fondo{
         background: url(../img/fondo_login.jpeg);
         background-position: -20px -150px;
         height: 400px;
         padding: 0;
     }
+
+    .formulario__input-vacio{
+        border: 0;
+    }
+    
+    .formulario-registro{
+        margin: auto 0;
+        height: 100vh;
+        width: 100vw;
+    }
+    .cuerpoFormulario-registro{
+        margin: auto 0;
+        height: 120vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .colorFondo{
+        margin: 0;
+        background-color: rgba(120,133, 158, 0.6);
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .cuerpoFormulario-registro .logo{
+        margin-top: 70px;
+        font-size: 10rem;
+        margin-bottom: 75px;
+    }
+
+
 }

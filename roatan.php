@@ -1,3 +1,10 @@
+<?php 
+  session_start();
+   if(empty($_SESSION["idUsuario"]))
+    {
+      header("location: login.php");
+   }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,32 +30,47 @@
 </head>
 <!-- al navbar, está dentro de un container-fluid (Cuidado al colocar CSS) -->
 <body>
-  <!-- INICIO NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="paquetes.html">PAQUETES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="promociones.html">PROMOCIONES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="actividades.html">ACTIVIDADES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="servicios.html">SERVICIOS</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-<!-- FIN NAVBAR -->
+<!-- INICIO NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.php"> <img src="img/logo.png" alt="Logotipo" height="50rem"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <div class="nav-link">
+              <?php echo $_SESSION['nombre'] ." ". $_SESSION['apellido'] ?>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="paquetes.php">PAQUETES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="promociones.php">PROMOCIONES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="actividades.php">ACTIVIDADES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="servicios.php">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="registro.php">REGISTRAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="login.php">INGRESAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="controlador_cerrar_session.php">SALIR</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- FIN NAVBAR -->
   <div class="contenedor-contenido">
     <!-- EMPEZAR EL CONTENIDO DE LA PÁGIANA AQUI -->
         <h1 id="nombrePaquete">PAQUETE DE ROATÁN</h1>
@@ -88,15 +110,30 @@
                   </div>
               </div>
             </div>
-            <div class="precio">
-              <p class="etiqueta_precio">Precio: </p><p>$</p><p>300</p>
-            </div>
 
             <?php
-              $var = "1";
+            $tipo = "2";
+            $var = "1";        
+            $con = mysqli_connect("localhost", "root", "", "proyecto");
+            
+            
+
+            $sql = "SELECT * FROM paquetes where idPaquete = $var";
+            $res = mysqli_query($con, $sql);
+                  
+            $row = mysqli_fetch_array($res, MYSQLI_NUM);
+            $money = $row[3];
             ?>
 
-            <button id="comprar" class="comprarPaquete"> <a href="pago.php?variable= <?php echo $var; ?>">Comprar Paquete</a> </button>
+
+
+            <div class="precio">
+              <p class="etiqueta_precio">Precio: </p><p>$</p><p><?php echo $money ?></p>
+            </div>
+
+           
+
+            <button id="comprar" class="comprarPaquete"> <a href="pago.php?variable=<?php echo $var;?>&tipo=<?php echo $tipo;?>">Comprar Paquete</a> </button>
         </div>
        
 
